@@ -1,0 +1,14 @@
+{
+  "name": "modular-values",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cssberries/settings.modular-values",
+  "authors": [
+    "Belov Yevgeniy ugenmail@gmail.com"
+  ],
+  "description": "Quantized values to be used with margins, padding, heights and widths.",
+  "main": "settings.modular-values.less",
+  "keywords": [
+    "css"
+  ],
+  "license": "MIT"
+}
