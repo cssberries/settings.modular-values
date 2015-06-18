@@ -1,33 +1,37 @@
 /*---------------------------------------------*\
-	#MODULAR VALUES
+    #MODULAR VALUES
 \*---------------------------------------------*/
-// A Golden Ratio (1.618) seemed to me too "contrast".
-// Ratios under "1.5" generate too many values.
-// I found that ratio of "1.5" is the most balanced.
-$modularRatio:                       1.5;
+
 /**
-* 1. Modular scale doesn't work well for the small numbers
-*	 because LCD displays are built from matrix of pixels
-*	 so the value that follows "1" is "2" and not "1.5".
-* 2. The third value should be a "3". It will be fixed
-*    in future versions.
+* Modular values are useful for generating modular spacing and dimensions.
 */
 
-$_1  : 1px;
-$_2  : 2px; /*[1]*/
-$_3  : 3px;
-$_4  : 4px;
-$_5  : 6px;
-$_6  : 9px;
-$_7  : 14px;
-$_8  : 20px;
-$_9  : 30px;
-$_10 : round($_9  * $modularRatio); /*[2]*/
-$_11 : round($_10 * $modularRatio);
-$_12 : round($_11 * $modularRatio);
-$_13 : round($_12 * $modularRatio);
-$_14 : round($_13 * $modularRatio);
-$_15 : round($_14 * $modularRatio);
-$_16 : round($_15 * $modularRatio);
-$_17 : round($_16 * $modularRatio);
-$_18 : round($_17 * $modularRatio);
+// 1. The golden Ratio (1.618) seems too "contrast".
+//    Ratios under "1.5" generate too many values.
+//    I found that ratio of "1.5" is the most balanced.
+// 2. The smallest possible value. 
+// 3. Modular scale doesn't work for the small numbers
+//    because LCD displays are built as matrix of pixels
+//    so the value that follows "1" is "2" and not "1.5".
+// 4. Now we can use automated modular ratio.
+
+$modular-ratio: 1.5; /*[1]*/
+
+$_1: 1px; /*[2]*/
+$_2: 2px; /*[3]*/
+$_3: 3px;
+$_4: 4px;
+$_5: 6px;
+$_6: 9px;
+$_7: 14px;
+$_8: 20px;
+$_9: 30px;
+$_10: round($_9 * $modular-ratio); /*[4]*/
+$_11: round($_10 * $modular-ratio);
+$_12: round($_11 * $modular-ratio);
+$_13: round($_12 * $modular-ratio);
+$_14: round($_13 * $modular-ratio);
+$_15: round($_14 * $modular-ratio);
+$_16: round($_15 * $modular-ratio);
+$_17: round($_16 * $modular-ratio);
+$_18: round($_17 * $modular-ratio);
